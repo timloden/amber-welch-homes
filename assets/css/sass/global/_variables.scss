@@ -6,6 +6,7 @@
 // Color system
 
 $white: #fff !default;
+$gray: #525252;
 $gray-100: #f8f9fa !default;
 $gray-200: #e9ecef !default;
 $gray-300: #dee2e6 !default;
@@ -15,7 +16,7 @@ $gray-600: #6c757d !default;
 $gray-700: #495057 !default;
 $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
-$black: #000 !default;
+$black: #171717 !default;
 
 // fusv-disable
 $grays: (
@@ -60,8 +61,8 @@ $colors: (
     'gray-dark': $gray-800,
 ) !default;
 
-$primary: $blue !default;
-$secondary: $green !default;
+$primary: $black !default;
+$secondary: $gray !default;
 $success: $green !default;
 $info: $cyan !default;
 $warning: $yellow !default;
@@ -356,7 +357,8 @@ $transition-collapse: height 0.35s ease !default;
 // Font, line-height, and color for body text, headings, and more.
 
 // stylelint-disable value-keyword-case
-$font-family-sans-serif: 'Open Sans', sans-serif;
+$font-family-sans-serif: 'Roboto', sans-serif;
+$font-family-serif: 'Domine', serif;
 $font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
     'Liberation Mono', 'Courier New', monospace !default;
 $font-family-base: $font-family-sans-serif !default;
@@ -371,7 +373,7 @@ $font-size-lg: $font-size-base * 1.25 !default;
 
 $font-weight-lighter: lighter !default;
 $font-weight-light: 300 !default;
-$font-weight-normal: 400 !default;
+$font-weight-normal: 500 !default;
 $font-weight-bold: 700 !default;
 $font-weight-bolder: 900 !default;
 

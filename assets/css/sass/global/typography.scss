@@ -2,6 +2,10 @@ a {
     text-decoration: none;
 }
 
+p {
+    font-weight: $font-weight-light;
+}
+
 b,
 strong {
     font-weight: $font-weight-bold;

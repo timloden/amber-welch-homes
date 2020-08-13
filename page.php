@@ -9,7 +9,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package restoration-performance
+ * @package amber-welch
  */
 
 get_header();

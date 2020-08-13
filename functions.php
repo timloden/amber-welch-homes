@@ -10,9 +10,9 @@
 
 require 'plugin-update-checker/plugin-update-checker.php';
 $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
-'https://github.com/timloden/simple-pest-management',
+'https://github.com/timloden/amber-welch-homes',
 __FILE__,
-'simple-pest'
+'amber-welch'
 );
 // Optional: If you're using a private repository, specify the access token like this:
 // $myUpdateChecker->setAuthentication('your-token-here');

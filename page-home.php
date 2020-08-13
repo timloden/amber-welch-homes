@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package simple-pest
+ * @package amber-welch
  */
 
 get_header();
