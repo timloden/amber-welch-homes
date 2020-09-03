@@ -14,7 +14,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
 */
 
 // Fonts
-@import url('https://fonts.googleapis.com/css2?family=Domine:wght@700&family=Roboto:wght@300;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap');
+$font-path: '/wp-content/themes/amber-welch-homes/assets/fonts/';
 
 // Bootstrap styles
 @import 'global/_variables';

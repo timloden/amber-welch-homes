@@ -25,3 +25,12 @@ h6,
 .h6 {
     font-weight: $font-weight-bold;
 }
+
+@font-face {
+    font-family: 'Beatrise Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Beatrise Regular'),
+        url('/wp-content/themes/amber-welch-homes/assets/fonts/beatrise/Beatrise-GOJ5O.woff')
+            format('woff');
+}

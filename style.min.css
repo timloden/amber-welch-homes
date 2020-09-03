@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Domine:wght@700&family=Roboto:wght@300;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;
 
 /*!
 Theme Name: Amber Welch Homes
@@ -2916,6 +2916,7 @@ a{text-decoration:none}
 p{font-weight:300}
 b,strong{font-weight:700}
 h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{font-weight:700}
+@font-face{font-family:'Beatrise Regular';font-style:normal;font-weight:normal;src:local("Beatrise Regular"),url("/wp-content/themes/amber-welch-homes/assets/fonts/beatrise/Beatrise-GOJ5O.woff") format("woff")}
 .topbar{font-size:12px}
 .topbar a{text-decoration:underline}
 header #menu-header li.nav-item a{font-weight:600;font-size:14px;color:#171717}
