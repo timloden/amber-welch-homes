@@ -29,18 +29,8 @@
 <body <?php body_class(); ?>>
     <?php wp_body_open(); ?>
     <div id="page" class="site">
-
+        <?php if (!is_front_page()) :?>
         <header class="header sticky-top pb-2 bg-white shadow-sm">
-            <div class="topbar bg-primary">
-                <div class="container py-2">
-                    <div class="col text-center">
-                        <p class="mb-0 text-white">Already a customer? <a class="text-white"
-                                href="<?php echo esc_url(get_field('client_login_link', 'option')) ?>">Login
-                                to our customer portal <i class="las la-angle-right"></i></a>
-                        </p>
-                    </div>
-                </div>
-            </div>
             <div class="container pt-2">
                 <nav class="d-flex align-items-center">
                     <?php if (get_field('logo', 'option')) : 
@@ -73,7 +63,7 @@
                     </div>
                     <!-- end mobile menu -->
                 </div>
-            </div>
+                </>
         </header>
-
+        <?php endif; ?>
         <div id=" content" class="site-content">
