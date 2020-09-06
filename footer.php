@@ -9,101 +9,38 @@
  *
  * @package amber-welch
  */
-?>
 
-<?php if (!is_front_page()) :?>
-<section class="clients border-top">
-    <div class="container py-5">
-        <div class="row align-items-center">
-            <div class="col-12 col-lg-4 mb-5 mb-lg-0">
-                <div class="position-sticky" style="top: 200px;">
-                    <h2 class="border-bottom mb-3 pb-3">Hear from some of our clients</h2>
-                    <p>We want you to feel confident in your pest service so please take a look at what some of our
-                        satisfied customers are saying!</p>
-                </div>
-            </div>
-            <div class="col-12 col-lg-8">
-                <?php if( have_rows('review_sites', 'option') ): ?>
-                <div class="row">
-                    <?php while( have_rows('review_sites', 'option') ): the_row(); 
-                    $image = get_sub_field('image');
-                    ?>
-                    <div class="col-6 col-lg-3">
-                        <a href="<?php the_sub_field('link'); ?>" target="_blank">
-                            <img src="<?php echo $image['url']; ?>" class="img-fluid px-1">
-                        </a>
-                    </div>
-                    <?php endwhile; ?>
-                </div>
-                <?php endif; ?>
-            </div>
-        </div>
-    </div>
-</section>
-<?php endif; ?>
+$footer_logo = get_field('footer_logo', 'option');
+$footer_email = get_field('footer_email', 'option');
+
+?>
 
 </div><!-- #content -->
 
-<footer class="site-footer border-top bg-white">
-    <div class="jumbotron jumbotron-fluid footer-hero mb-0 position-relative"
-        style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/images/footer-form-bg.jpg); background-size: cover; background-position: center;">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-12 col-lg-6 hero-text mb-3 text-center text-lg-left text-center">
-                    <p class="text-white text-center h5 font-weight-normal">Simple Pest Management</p>
-                    <p class="h1 text-white text-center mb-3">100% Satisfaction Guaranteed</p>
-                    <p class="lead text-white text-center mb-0">Call us now</p>
-                    <p class="h2 text-success text-center">(619) 373-PEST (7378)</p>
-                </div>
-                <div class="col-12 col-lg-6">
-                    <div class="py-3 text-center text-primary">
-                        <p class="mb-0 h4 text-white font-weight-normal">Get a FREE estimate today!</p>
-                    </div>
-                    <div class="hero-form shadow-sm rounded bg-white p-3 border position-relative">
-                        <p class="mb-2 text-center hero-form-title mb-0 d-none">Get a free estimate today!</p>
-                        <?php gravity_form( 1, false, false, false, '', true, 12 ); ?>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container pt-5 pb-5 text-center text-lg-left">
+<footer class="site-footer bg-primary py-5">
+    <div class="container py-5 text-center">
         <div class="row">
-            <div class="col-12 col-lg-7 mb-3">
-                <div class="d-flex flex-wrap">
-                    <div class="col-12 col-lg-5 pl-0">
-                        <img class="img-fluid"
-                            src="<?php echo get_template_directory_uri(); ?>/assets/images/simple-pest-logo-horizontal-color-expanded.png">
-                        <p class="border-top mt-4 pt-4 mb-2">
-                            <?php echo esc_attr(get_field('phone_number', 'option')) ?>
-                        </p>
-                        <?php echo esc_attr(the_field('address', 'option')) ?>
-                    </div>
-                    <div class="col-12 col-lg-7 px-0">
-                        <?php wp_nav_menu( array( 'theme_location' => 'footer-primary', 'container' => 'div','container_id' => 'footer-header-menu', 'container_class' => 'px-0 px-lg-4', 'menu_class' => 'nav flex-column', 'add_li_class'  => 'nav-item', 'depth' => 2 ) ); ?>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-lg-5 footer-text">
-                <p>At Simple Pest Management, our customized maintenance programs are designed with you and your family
-                    in mind to provide a protective barrier around your home and yard.</p>
-
-                <p>No matter the type of infestation or problem, Simple Pest Management is your #1 choice in east county
-                    San Diego. We offer excellent customer service and efficient treatments for any problem. Let us
-                    customize the ultimate service plan for you.</p>
-
-                <p><strong>We kill bug&hellip; It’s that SIMPLE&hellip; Call us today!</strong></p>
-
+            <div class="col-12 text-center text-light">
+                <img class="img-fluid" src="<?php echo esc_url($footer_logo['url']); ?>"
+                    alt="<?php echo esc_attr($footer_logo['alt']); ?>">
+                <?php wp_nav_menu( array( 'theme_location' => 'footer-primary', 'container' => 'div', 'container_id' => 'footer-header-menu', 'container_class' => 'px-0 px-lg-4', 'menu_class' => 'nav justify-content-center py-5', 'add_li_class'  => 'nav-item', 'depth' => 1 ) ); ?>
+                <div class="footer-address mb-3" style="font-size: 18px;">
+                    <?php echo esc_attr(the_field('address', 'option')) ?></div>
+                <p style="font-size: 18px;"><?php echo esc_attr(get_field('phone_number', 'option')) ?>
+                    <?php if ($footer_email) : ?> <span class="px-2">|</span> <a
+                        href="mailto:<?php echo esc_attr($footer_email) ?>"
+                        class="text-light"><?php echo esc_attr($footer_email) ?></a><?php endif; ?>
+                </p>
+                <p class="mt-5 mb-4" style="font-size: 12px;">Based on information from California Regional Multiple
+                    Listing Service, Inc.
+                    as of
+                    2020-08-09T17:26:11.36. This information is for your personal, non-commercial use and may not be
+                    used for any purpose other than to identify prospective properties you may be interested in
+                    purchasing. Display of MLS data is deemed reliable but is not guaranteed accurate by the MLS or
+                    Amber Welch Homes. Licensed in the State of California, USA.</p>
+                <p>Amber Welch, CA DRE# 02052998 | All rights reserved </p>
             </div>
         </div>
-
-    </div>
-    <div class="copyright bg-primary">
-        <div class="container">
-            <p class="text-white m-0 p-2 text-center">&copy; Simple Pest Management <?php echo date( 'Y' ); ?> |
-                License, Bonded and Insured</p>
-        </div>
-
     </div>
 </footer>
 </div><!-- #page -->

@@ -34,3 +34,11 @@ h6,
         url('/wp-content/themes/amber-welch-homes/assets/fonts/beatrise/Beatrise-GOJ5O.woff')
             format('woff');
 }
+
+.text-serif {
+    font-family: $font-family-serif;
+}
+
+.section-title {
+    font-size: 40px;
+}

@@ -2909,35 +2909,24 @@ a.text-dark:hover,a.text-dark:focus{color:#121416 !important}
 .animated.faster{-webkit-animation-duration:500ms;animation-duration:500ms}
 .animated.slow{-webkit-animation-duration:2s;animation-duration:2s}
 .animated.slower{-webkit-animation-duration:3s;animation-duration:3s}
-.btn-orange{background-color:#f6961b;border:0;color:#fff}
-.btn-yelp{background-color:#c41200;border:0}
-.btn-phone-number{font-weight:600;padding:.375rem 1rem}
+body{background-color:#f3f3f3}
+.bg-grad{background-image:-webkit-gradient(linear,left top,left bottom,color-stop(36%,#fff),to(#f3f3f3));background-image:linear-gradient(180deg,#fff 36%,#f3f3f3 100%)}
+.shadow{-webkit-box-shadow:0 3px 20px 2px rgba(0,0,0,0.15) !important;box-shadow:0 3px 20px 2px rgba(0,0,0,0.15) !important}
 a{text-decoration:none}
 p{font-weight:300}
 b,strong{font-weight:700}
 h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{font-weight:700}
 @font-face{font-family:'Beatrise Regular';font-style:normal;font-weight:normal;src:local("Beatrise Regular"),url("/wp-content/themes/amber-welch-homes/assets/fonts/beatrise/Beatrise-GOJ5O.woff") format("woff")}
-.topbar{font-size:12px}
-.topbar a{text-decoration:underline}
-header #menu-header li.nav-item a{font-weight:600;font-size:14px;color:#171717}
-header #menu-header li.nav-item:last-child a{color:#f3f3f3}
-header #menu-header li.menu-item-has-children a:after{font-family:Line Awesome Free;font-weight:900;display:inline-block;margin-left:.5rem;content:'\f107'}
-header #menu-header li.menu-item-has-children ul li a:after{display:none}
-header #menu-header li.menu-item-has-children ul li:last-child a{color:#171717}
-header #menu-header .dropdown-menu{min-width:13rem}
+.text-serif{font-family:"Beatrise Regular",serif}
+.section-title{font-size:40px}
+header #menu-header .nav-link{padding:.5rem;color:#fff}
 header #menu-mobile li a{border-bottom:1px solid #dee2e6}
 header #menu-mobile li:last-child a{border-bottom:0}
 header #menu-mobile li ul.sub-menu{list-style:none;padding-left:0}
 header #menu-mobile li ul.sub-menu li a{border-bottom:1px solid #f8f9fa;padding-left:2rem}
 header button.btn,header .gform_wrapper button.button,.gform_wrapper header button.button{font-size:30px;line-height:1;border:1px solid #dee2e6}
-footer .guarantee{background-color:#f2f6f9}
-footer .footer-hero .h1{font-size:3.5rem}
-footer .footer-hero .h2{font-size:2.5rem}
-footer .address{font-size:14px;color:#6c757d}
-footer .copyright{font-size:12px}
-footer #menu-footer{font-size:14px}
-footer #menu-footer .nav-link{display:inline-block}
-footer .footer-text p{font-size:14px}
+.footer-address p{margin-bottom:10px;line-height:1}
+#footer-header-menu a{color:#fff}
 .gform_wrapper form{margin-bottom:0}
 .gform_wrapper .gfield_required{padding-left:1px;color:#dc3545}
 .gform_wrapper label{font-size:12px}
@@ -2948,8 +2937,10 @@ footer .footer-text p{font-size:14px}
 .estimate-form .captcha{display:none}
 .estimate-form .gform_footer{text-align:right}
 .estimate-form .gform_footer .gform_button{font-size:18px;font-weight:600;padding:.5rem 2rem;background-color:#f6961b;border:0}
-.bg-light-blue{background-color:#f2f6f9}
-.bg-orange{background-color:#f6961b}
+.home-hero{height:60vh}
+.home-hero .hero-text-title{font-size:80px}
+.slider-arrows{bottom:calc(50% - 16px)}
+.area-link:hover{text-decoration:none}
 @media(prefers-reduced-motion:reduce){.form-control,.gform_wrapper input[type='email'],.gform_wrapper input[type='date'],.gform_wrapper input[type='datetime'],.gform_wrapper input[type='datetime-local'],.gform_wrapper input[type='month'],.gform_wrapper input[type='number'],.gform_wrapper input[type='password'],.gform_wrapper input[type='search'],.gform_wrapper input[type='tel'],.gform_wrapper input[type='text'],.gform_wrapper input[type='time'],.gform_wrapper input[type='week'],.gform_wrapper input[type='url'],.gform_wrapper select,.gform_wrapper textarea{-webkit-transition:none;transition:none}
 .btn,.gform_wrapper .button{-webkit-transition:none;transition:none}
 .fade{-webkit-transition:none;transition:none}

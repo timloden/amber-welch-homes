@@ -1,1 +1,17 @@
+.home-hero {
+    height: 60vh;
 
+    .hero-text-title {
+        font-size: 80px;
+    }
+}
+
+.slider-arrows {
+    bottom: calc(50% - 16px);
+}
+
+.area-link {
+    &:hover {
+        text-decoration: none;
+    }
+}

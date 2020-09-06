@@ -35,6 +35,7 @@ $la-font-path: '/wp-content/themes/amber-welch-homes/assets/fonts/line-awesome';
 @import 'node_modules/animate.css/animate';
 
 // Global
+@import 'global/global.scss';
 @import 'global/buttons';
 @import 'global/typography';
 @import 'global/header';
