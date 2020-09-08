@@ -69,16 +69,23 @@ $top_areas_button_link = get_field('top_areas_button_link');
                     <div class="testimonial-cards my-4">
 
                         <?php while( have_rows('testimonial_list') ): the_row(); 
+                            $title = get_sub_field('title');
                             $quote = get_sub_field('quote');
                             $name = get_sub_field('name');
-                            $title = get_sub_field('buyerseller');
+                            $buyerseller = get_sub_field('buyerseller');
                             ?>
                         <div class="">
-                            <div class="card shadow border-0">
+                            <div class="card shadow border-0 h-100">
                                 <div class="card-body">
-                                    <p><?php echo $quote; ?></p>
-                                    <p class="text-right font-weight-bold mb-0"><?php echo $name; ?></p>
-                                    <p class="text-right font-weight-bold mb-0"><?php echo $title; ?></p>
+                                    <div class="testimonial-quote">
+                                        <?php if ($title) : ?><p class="font-weight-bold"><?php echo $title; ?></p>
+                                        <?php endif; ?>
+                                        <p><?php echo $quote; ?></p>
+                                    </div>
+                                    <div class="testimonial-author">
+                                        <p class="text-right font-weight-bold mb-0"><?php echo $name; ?></p>
+                                        <p class="text-right font-weight-bold mb-0"><?php echo $buyerseller; ?></p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -145,6 +152,8 @@ var slider = tns({
     prevButton: '.left-arrow',
     nextButton: '.right-arrow',
     nav: false,
+    autoplay: true,
+    autoplayButtonOutput: false,
     responsive: {
         768: {
             items: 2

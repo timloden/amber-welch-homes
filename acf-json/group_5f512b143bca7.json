@@ -232,6 +232,25 @@
             "button_label": "",
             "sub_fields": [
                 {
+                    "key": "field_5f57aba3c54e9",
+                    "label": "Title",
+                    "name": "title",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
                     "key": "field_5f5261fe94b02",
                     "label": "Name",
                     "name": "name",
@@ -447,5 +466,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1599262104
+    "modified": 1599581110
 }

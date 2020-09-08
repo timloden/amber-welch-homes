@@ -30,7 +30,8 @@
     <?php wp_body_open(); ?>
     <div id="page" class="site">
 
-        <header class="header sticky-top pb-2 position-absolute w-100">
+        <header class="header pb-2 position-absolute w-100"
+            style="z-index: 9999; background: linear-gradient(180deg, rgba(0,0,0,0.5) 40%, rgba(0,0,0,0) 100%);">
             <div class="container pt-2">
                 <nav class="d-flex align-items-center">
                     <?php if (get_field('logo', 'option')) : 
@@ -40,7 +41,7 @@
                             src="<?php echo esc_url($logo['url']); ?>" alt="<?php echo esc_attr($logo['alt']); ?>"
                             style="width: 200px;"></a>
                     <?php else : ?>
-                    <a class="navbar-brand" href="<?php echo site_url(); ?>">Simple Pest Management</a>
+                    <a class="navbar-brand" href="<?php echo site_url(); ?>">Amber Welch Homes</a>
                     <?php endif; ?>
 
                     <div class="d-flex justify-content-end align-items-center w-100">

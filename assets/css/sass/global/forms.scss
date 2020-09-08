@@ -114,3 +114,23 @@
         }
     }
 }
+
+.consultation-form {
+    .ginput_container {
+        input,
+        select,
+        textarea {
+            width: 100% !important;
+        }
+    }
+
+    .gform_footer.left_label {
+        margin-left: 0 !important;
+        width: 100% !important;
+
+        .gform_button {
+            display: block !important;
+            width: 100% !important;
+        }
+    }
+}

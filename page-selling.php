@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Contact
+ * Template Name: Selling
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -29,15 +29,12 @@ $hero_image = get_field('hero_image');
     <div class="container">
         <div class="row">
             <div class="col-12 col-lg-4 pb-4">
-                <h2>Amber Welch Homes</h2>
-                <p>Keller Williams Realty</p>
-                <div class="address mb-3"><?php echo esc_attr(the_field('address', 'option')) ?></div>
-                <p class="h5"><strong><a
-                            href="tel:<?php echo esc_attr(get_field('phone_number', 'option')) ?>"><?php echo esc_attr(get_field('phone_number', 'option')) ?></a></strong>
-                </p>
-                <p class="h5"><strong><a
-                            href="mailto:<?php echo esc_attr(get_field('footer_email', 'option')) ?>"><?php echo esc_attr(get_field('footer_email', 'option')) ?></a></strong>
-                </p>
+                <h2>Selling Your Home</h2>
+                <p>Fill out this quick and simple seller consultation form and we will get back to you as soon as
+                    possible.&nbsp;If you have any questions, please do not hesitate to contact us by&nbsp;<a
+                        href="mailto:amberwelchhomes@gmail.com">email</a>, or by phone at <a rel="noreferrer noopener"
+                        href="tel:<?php echo esc_attr(get_field('phone_number', 'option')) ?>"
+                        target="_blank"><?php echo esc_attr(get_field('phone_number', 'option')) ?></a>.</p>
             </div>
             <div class="col-12 col-lg-8">
                 <div class="shadow rounded bg-white p-3 border position-relative">

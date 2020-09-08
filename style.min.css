@@ -2937,6 +2937,9 @@ header button.btn,header .gform_wrapper button.button,.gform_wrapper header butt
 .estimate-form .captcha{display:none}
 .estimate-form .gform_footer{text-align:right}
 .estimate-form .gform_footer .gform_button{font-size:18px;font-weight:600;padding:.5rem 2rem;background-color:#f6961b;border:0}
+.consultation-form .ginput_container input,.consultation-form .ginput_container select,.consultation-form .ginput_container textarea{width:100% !important}
+.consultation-form .gform_footer.left_label{margin-left:0 !important;width:100% !important}
+.consultation-form .gform_footer.left_label .gform_button{display:block !important;width:100% !important}
 .home-hero{height:60vh}
 .home-hero .hero-text-title{font-size:80px}
 .slider-arrows{bottom:calc(50% - 16px)}
