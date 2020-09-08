@@ -2944,6 +2944,17 @@ header button.btn,header .gform_wrapper button.button,.gform_wrapper header butt
 .home-hero .hero-text-title{font-size:80px}
 .slider-arrows{bottom:calc(50% - 16px)}
 .area-link:hover{text-decoration:none}
+.featured-listing .sidx-container .sidx-search-results .sidx-grid-list-view{border-top:0}
+.featured-listing .sidx-container .sidx-search-result-grid-item,.featured-listing .sidx-container .sidx-search-result-list-item{border:0}
+.featured-listing .sidx-container .sidx-search-result-grid-item.sidx-search-result-grid-list-item .sidx-actions{display:none}
+.featured-listing .sidx-container .sidx-search-results .sidx-search-result-grid-item:not(.sidx-search-result-grid-list-item) .sidx-actions{display:none}
+.featured-listing .sidx-container .sidx-search-result-grid-item.sidx-search-result-grid-list-item .sidx-thumbnail{width:500px}
+.featured-listing .sidx-container .sidx-search-result-grid-item.sidx-search-result-grid-list-item .sidx-description{color:#000}
+.featured-listing .sidx-container .sidx-search-result-grid-item.sidx-search-result-grid-list-item .sidx-primary-info{padding-bottom:.5em;font-size:24px}
+.featured-listing .sidx-container .sidx-search-result-grid-item.sidx-search-result-grid-list-item .sidx-primary-info .sidx-price{color:#000}
+.featured-listing .sidx-container .sidx-search-result-grid-item.sidx-search-result-grid-list-item .sidx-listing-heading{font-size:2em;color:#000}
+.featured-listing .sidx-container .sidx-search-result-grid-item.sidx-search-result-grid-list-item .sidx-mls-details{padding-bottom:.5em}
+.sidx-container .sidx-primary-action .sidx-primary-action-icon-container i.blue{color:#000}
 @media(prefers-reduced-motion:reduce){.form-control,.gform_wrapper input[type='email'],.gform_wrapper input[type='date'],.gform_wrapper input[type='datetime'],.gform_wrapper input[type='datetime-local'],.gform_wrapper input[type='month'],.gform_wrapper input[type='number'],.gform_wrapper input[type='password'],.gform_wrapper input[type='search'],.gform_wrapper input[type='tel'],.gform_wrapper input[type='text'],.gform_wrapper input[type='time'],.gform_wrapper input[type='week'],.gform_wrapper input[type='url'],.gform_wrapper select,.gform_wrapper textarea{-webkit-transition:none;transition:none}
 .btn,.gform_wrapper .button{-webkit-transition:none;transition:none}
 .fade{-webkit-transition:none;transition:none}

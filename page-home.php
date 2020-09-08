@@ -18,6 +18,9 @@ $hero_button_link = get_field('hero_button_link');
 // about
 $about_us_image = get_field('about_us_image');
 
+// featured shortcode
+$featured_listing_shortcode = get_field('featured_listing_shortcode');
+
 // areas
 $top_areas_button_text = get_field('top_areas_button_text');
 $top_areas_button_link = get_field('top_areas_button_link');
@@ -58,8 +61,11 @@ $top_areas_button_link = get_field('top_areas_button_link');
 </section>
 <section class="testimonials py-5 bg-grad">
     <div class="container py-5">
-        <div class="row featured-listing">
-
+        <div class="row">
+            <div class="col-12 featured-listing pb-lg-5 mb-lg-5">
+                <h2 class="section-title text-serif mb-5">Featured Listing</h2>
+                <?php echo do_shortcode( $featured_listing_shortcode ); ?>
+            </div>
         </div>
         <?php if( have_rows('testimonial_list') ): ?>
         <div class="row testimonial-slider">

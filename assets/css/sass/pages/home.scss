@@ -15,3 +15,63 @@
         text-decoration: none;
     }
 }
+
+.featured-listing {
+    .sidx-container .sidx-search-results .sidx-grid-list-view {
+        border-top: none;
+    }
+
+    .sidx-container .sidx-search-result-grid-item,
+    .sidx-container .sidx-search-result-list-item {
+        border: none;
+    }
+
+    .sidx-container
+        .sidx-search-result-grid-item.sidx-search-result-grid-list-item
+        .sidx-actions {
+        display: none;
+    }
+
+    .sidx-container
+        .sidx-search-results
+        .sidx-search-result-grid-item:not(.sidx-search-result-grid-list-item)
+        .sidx-actions {
+        display: none;
+    }
+
+    .sidx-container
+        .sidx-search-result-grid-item.sidx-search-result-grid-list-item
+        .sidx-thumbnail {
+        width: 500px;
+    }
+
+    .sidx-container
+        .sidx-search-result-grid-item.sidx-search-result-grid-list-item
+        .sidx-description {
+        color: #000;
+    }
+
+    .sidx-container
+        .sidx-search-result-grid-item.sidx-search-result-grid-list-item
+        .sidx-primary-info {
+        padding-bottom: 0.5em;
+        font-size: 24px;
+
+        .sidx-price {
+            color: #000;
+        }
+    }
+
+    .sidx-container
+        .sidx-search-result-grid-item.sidx-search-result-grid-list-item
+        .sidx-listing-heading {
+        font-size: 2em;
+        color: #000;
+    }
+
+    .sidx-container
+        .sidx-search-result-grid-item.sidx-search-result-grid-list-item
+        .sidx-mls-details {
+        padding-bottom: 0.5em;
+    }
+}

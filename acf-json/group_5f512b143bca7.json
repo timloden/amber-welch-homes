@@ -197,6 +197,41 @@
             "maxlength": ""
         },
         {
+            "key": "field_5f57dd13bca8e",
+            "label": "Featured Listing",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5f57dd34bca8f",
+            "label": "Featured Listing Shortcode",
+            "name": "featured_listing_shortcode",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_5f5261d794b00",
             "label": "Testimonials",
             "name": "",
@@ -466,5 +501,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1599581110
+    "modified": 1599593799
 }

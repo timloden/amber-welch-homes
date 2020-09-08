@@ -22,7 +22,7 @@ $hero_image = get_field('hero_image');
 </div>
 <section class="py-3 py-lg-5">
     <div class="container">
-        <div class="row ">
+        <div class="row">
             <div class="col-12">
                 <?php // WP_Query arguments
                 $args = array (
@@ -36,11 +36,17 @@ $hero_image = get_field('hero_image');
                 $query = new WP_Query( $args ); 
                 if ( $query->have_posts() ) :
                 ?>
-                <div class="row">
+                <div class="row justify-content-center">
 
-                    <?php while ( $query->have_posts() ) : $query->the_post(); ?>
-                    <div class="col-12 col-md-6 text-center pb-5">
-                        <h2><?php the_title(); ?></h2>
+                    <?php while ( $query->have_posts() ) : $query->the_post(); 
+                    $featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full'); 
+                    ?>
+                    <div class="col-12 col-md-4 text-center pb-5">
+                        <?php if ($featured_img_url): ?>
+                        <a href="<?php the_permalink(); ?>"><img src="<?php echo esc_url($featured_img_url); ?>"
+                                class="img-fluid"></a>
+                        <?php endif; ?>
+                        <h2 class="py-3"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
                         <a class="btn btn-outline-primary" href="<?php the_permalink(); ?>">Meet
                             <?php the_title(); ?></a>
                     </div>
