@@ -13,9 +13,17 @@
  */
 
 get_header();
+$uri  = $_SERVER['REQUEST_URI'];
+$uri  = explode( '?', $uri );
+$uri  = array_shift( $uri );
+$uri  = trim( $uri, '/' );
+
+
 $hero_image = get_field('hero_image');
+
 if ( !$hero_image ) {
-	$image = 'http://amberwelch.local/wp-content/uploads/2020/09/hero-image.jpg';
+	$default_hero = get_field('default_page_hero_image', 'option');
+	$image = $default_hero['url'];
 } else {
 	$image = $hero_image['url'];
 }
@@ -25,7 +33,14 @@ if ( !$hero_image ) {
     <div class="container h-100 pt-5">
         <div class="d-flex flex-column h-100 justify-content-center">
             <div class="text-center text-md-left" data-aos="fade-right" data-aos-delay="300">
+                <?php 
+				// is listing page
+				if (strpos($uri, 'listing') !== false) : ?>
+                <p class="text-white section-title text-serif mb-1" style="font-size: 2em;">Your Future Home</p>
+                <h1 class="text-white mb-5 hero-text-title listing-title"><?php the_title(); ?></h1>
+                <?php else : ?>
                 <h1 class="text-white text-serif my-5 hero-text-title"><?php the_title(); ?></h1>
+                <?php endif; ?>
             </div>
         </div>
     </div>

@@ -132,6 +132,30 @@
             "delay": 0
         },
         {
+            "key": "field_5f58ed6202c46",
+            "label": "Default Page Hero Image",
+            "name": "default_page_hero_image",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "large",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
             "key": "field_5f11ba7551638",
             "label": "Header Embed",
             "name": "header_embed",
@@ -187,5 +211,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1599315852
+    "modified": 1599663497
 }
