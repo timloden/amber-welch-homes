@@ -9,8 +9,7 @@
 
 ?>
 <div class="col mb-3">
-
-    <div class="card h-100 post-<?php the_ID(); ?>" <?php post_class(); ?>>
+    <div class="card shadow h-100 post-<?php the_ID(); ?>" <?php post_class(); ?>>
         <a href="<?php the_permalink(); ?>">
             <?php the_post_thumbnail('medium', ['class' => 'card-img-top', 'title' => 'Feature image']);
  ?>
@@ -20,6 +19,4 @@
             <p class="card-text"><?php the_excerpt(); ?></p>
         </div>
     </div>
-
-
 </div>

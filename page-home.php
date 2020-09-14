@@ -29,17 +29,19 @@ $top_areas_button_link = get_field('top_areas_button_link');
     style="background-image: url(<?php echo esc_url($hero_image['url']); ?>); background-size: cover;">
     <div class="container h-100">
         <div class="d-flex flex-column h-100 justify-content-center">
-            <div class="text-center text-md-left" data-aos="fade-right" data-aos-delay="300">
+            <div class="text-center text-md-left" data-aos="fade-right" data-aos-delay="100">
                 <h1 class="text-white text-serif mb-5 hero-text-title"><?php echo esc_attr($hero_title_text); ?></h1>
                 <a class="btn btn-outline-light"
                     href="<?php echo esc_url($hero_button_link); ?>"><?php echo esc_attr($hero_button_text); ?></a>
             </div>
-
+        </div>
+        <div class="text-center">
+            <a style="font-size: 30px;" class="text-light" href="#home-about"><i class="las la-angle-down"></i></a>
         </div>
 
     </div>
 </div>
-<section class="about py-5 ">
+<section id="home-about" class="about py-5 ">
     <div class="container py-5">
         <div class="row shadow bg-light">
             <div class="col-12 col-lg-6 py-3 py-lg-0">
@@ -48,6 +50,8 @@ $top_areas_button_link = get_field('top_areas_button_link');
                     <div class="about-text">
                         <?php the_field('about_text'); ?>
                     </div>
+                    <a class="btn btn-primary"
+                        href="<?php the_field('about_us_button_link'); ?>"><?php the_field('about_us_button_text'); ?></a>
                 </div>
                 <img class="img-fluid d-block d-lg-none m-auto" src="<?php echo esc_url($about_us_image['url']); ?>"
                     alt="<?php echo esc_attr($about_us_image['alt']); ?>">
@@ -59,18 +63,18 @@ $top_areas_button_link = get_field('top_areas_button_link');
         </div>
     </div>
 </section>
-<section class="testimonials py-5 bg-grad">
+<section id="home-featured" class="testimonials py-5 bg-grad">
     <div class="container py-5">
         <div class="row">
             <div class="col-12 featured-listing pb-lg-5 mb-lg-5">
-                <h2 class="section-title text-serif mb-5">Featured Listing</h2>
+                <h2 class="section-title text-center text-lg-left text-serif mb-5">Featured Listing</h2>
                 <?php echo do_shortcode( $featured_listing_shortcode ); ?>
             </div>
         </div>
         <?php if( have_rows('testimonial_list') ): ?>
         <div class="row testimonial-slider">
             <div class="col-12">
-                <h2 class="section-title text-serif mb-3">Hear from our Clients</h2>
+                <h2 class="section-title text-center text-lg-left text-serif mb-3">What our Clients are Saying</h2>
                 <div class="slider-wrapper position-relative">
                     <div class="testimonial-cards my-4">
 
@@ -81,7 +85,7 @@ $top_areas_button_link = get_field('top_areas_button_link');
                             $buyerseller = get_sub_field('buyerseller');
                             ?>
                         <div class="">
-                            <div class="card shadow border-0 h-100">
+                            <div class="h-100">
                                 <div class="card-body">
                                     <div class="testimonial-quote">
                                         <?php if ($title) : ?><p class="font-weight-bold"><?php echo $title; ?></p>
@@ -110,15 +114,16 @@ $top_areas_button_link = get_field('top_areas_button_link');
 <?php if( have_rows('areas') ): ?>
 <section class="top-areas bg-light py-5">
     <div class="container py-5">
-        <h2 class="section-title text-serif mb-5">Top Areas and Neighborhoods</h2>
+        <h2 class="section-title text-center text-lg-left text-serif mb-5">Top Areas and Neighborhoods</h2>
         <div class="row">
             <?php while( have_rows('areas') ): the_row(); 
                 $area_title = get_sub_field('area_title');
                 $area_subtitle = get_sub_field('area_subtitle');
+                $area_link = get_sub_field('area_link');
                 $area_background_image = get_sub_field('area_background_image');
             ?>
             <div class="col-sm-6 col-md-4 mb-4 pb-4">
-                <a class="area-link" href="#">
+                <a class="area-link" href="<?php echo esc_url($area_link); ?>">
                     <div class="area w-100 rounded shadow"
                         style="height: 300px; background-image: url(<?php echo esc_url($area_background_image['url']); ?>); background-size: cover;">
                         <div class="d-flex flex-column h-100 justify-content-center p-3">
@@ -162,10 +167,10 @@ var slider = tns({
     autoplayButtonOutput: false,
     responsive: {
         768: {
-            items: 2
+            items: 1
         },
         992: {
-            items: 3
+            items: 1
         }
     }
 });

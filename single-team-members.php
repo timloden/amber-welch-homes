@@ -9,6 +9,13 @@
 
 get_header();
 $hero_image = get_field('hero_image');
+
+if ( !$hero_image ) {
+	$default_hero = get_field('default_page_hero_image', 'option');
+	$image = $default_hero['url'];
+} else {
+	$image = $hero_image['url'];
+}
 $phone_number = get_field('phone_number');
 $email_address = get_field('email_address');
 $dre = get_field('dre');
@@ -19,7 +26,7 @@ $headshot_img_url = get_the_post_thumbnail_url(get_the_ID(),'full');
 ?>
 
 <div class="jumbotron jumbotron-fluid home-hero mb-0 position-relative"
-    style="background-image: url(<?php echo esc_url($hero_image['url']); ?>); background-size: cover;  height: 40vh;">
+    style="background-image: url(<?php echo esc_url($image); ?>); background-size: cover;  height: 50vh;">
     <div class="container h-100 pt-5">
         <div class="d-flex flex-column h-100 justify-content-center">
             <div class="text-center text-md-left" data-aos="fade-right" data-aos-delay="300">

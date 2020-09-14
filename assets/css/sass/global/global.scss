@@ -2,6 +2,10 @@ body {
     background-color: #f3f3f3;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .bg-grad {
     background-image: linear-gradient(180deg, #ffffff 36%, #f3f3f3 100%);
 }

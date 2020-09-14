@@ -17,7 +17,7 @@ $footer_email = get_field('footer_email', 'option');
 
 </div><!-- #content -->
 
-<footer class="site-footer bg-primary py-5">
+<footer style="background-color: #494949;" class="site-footer py-5">
     <div class="container py-5 text-center">
         <div class="row">
             <div class="col-12 text-center text-light">

@@ -11,7 +11,7 @@ get_header();
 $hero_image = get_field('hero_image');
 ?>
 <div class="jumbotron jumbotron-fluid home-hero mb-0 position-relative"
-    style="background-image: url(<?php echo esc_url($hero_image['url']); ?>); background-size: cover;  height: 40vh; background-position: center center;">
+    style="background-image: url(<?php echo esc_url($hero_image['url']); ?>); background-size: cover;  height: 50vh; background-position: center center;">
     <div class="container h-100 pt-5">
         <div class="d-flex flex-column h-100 justify-content-center">
             <div class="text-center text-md-left" data-aos="fade-right" data-aos-delay="300">
@@ -40,6 +40,8 @@ $hero_image = get_field('hero_image');
 
                     <?php while ( $query->have_posts() ) : $query->the_post(); 
                     $featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full'); 
+                    $full_name = get_the_title();
+                    $first_name = substr($full_name, 0, strpos($full_name, " "));
                     ?>
                     <div class="col-12 col-md-4 text-center pb-5">
                         <?php if ($featured_img_url): ?>
@@ -48,7 +50,7 @@ $hero_image = get_field('hero_image');
                         <?php endif; ?>
                         <h2 class="py-3"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
                         <a class="btn btn-outline-primary" href="<?php the_permalink(); ?>">Meet
-                            <?php the_title(); ?></a>
+                            <?php echo $first_name; ?></a>
                     </div>
                     <?php endwhile; wp_reset_postdata(); ?>
 

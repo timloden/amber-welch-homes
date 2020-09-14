@@ -15,15 +15,15 @@
  */
 
 get_header();
+$hero_image = get_field('blog_page_hero_image', 'option');
 ?>
-<div class="bg-light border-bottom">
-    <div class="container py-3">
-        <div class="row align-items-center">
-            <div class="col-12">
-                <header class="page-header">
-                    <h1 class="page-title text-center">Blog</h1>
-                    <div class="archive-description text-center"></div>
-                </header><!-- .page-header -->
+
+<div class="jumbotron jumbotron-fluid home-hero mb-0 position-relative"
+    style="background-image: url(<?php echo esc_url($hero_image['url']); ?>); background-size: cover;  height: 50vh; background-position: center center;">
+    <div class="container h-100 pt-5">
+        <div class="d-flex flex-column h-100 justify-content-center">
+            <div class="text-center text-md-left" data-aos="fade-right" data-aos-delay="300">
+                <h1 class="text-white text-serif my-5 hero-text-title">Blog</h1>
             </div>
         </div>
     </div>
@@ -34,34 +34,28 @@ get_header();
         <main id="main" class="site-main">
 
             <?php
+			$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 			$args = array(
-				'posts_per_page' => 6, // How many items to display
-				'no_found_rows'  => true, // We don't ned pagination so this speeds up the query
+				'posts_per_page' => 9, // How many items to display
+				'paged' => $paged
 			);
-			$cats = get_terms( array(
-				'taxonomy' => 'category',
-				'hide_empty' => true,
-			) );
-
-			$cats_ids = array();  
-			foreach( $cats as $cat ) {
-
-				$args['category__in'] = $cat;
+		
 				$loop = new WP_Query( $args );
 			
 				if ( $loop->have_posts() ) {
-					echo '<h3 class="py-3 mb-3 title-border">' . $cat->name . '</h3>';
-					echo '<div class="row row-cols-1 row-cols-md-3 pb-3">';
+					echo '<div class="row row-cols-1 row-cols-md-3 py-5">';
+					
 					while ( $loop->have_posts() ) : $loop->the_post();
 						get_template_part( 'template-parts/content', get_post_type() );
 					endwhile;
+					
 					echo '</div>';
-					echo '<a class="text-right d-block" href="' . site_url() . '\category/' . $cat->slug . '">Browse all ' . $cat->name . ' articles <i class="las la-arrow-right"></i></a>';
+					
+					next_posts_link( __( 'Older Entries', 'textdomain' ), $the_query->max_num_pages );
+    				previous_posts_link( __( 'Newer Entries', 'textdomain' ) );
 				}
 				wp_reset_postdata();
-				}
 			?>
-
         </main><!-- #main -->
     </div><!-- #primary -->
 </div>
