@@ -26,7 +26,7 @@ $top_areas_button_text = get_field('top_areas_button_text');
 $top_areas_button_link = get_field('top_areas_button_link');
 ?>
 <div class="jumbotron jumbotron-fluid home-hero mb-0 position-relative"
-    style="background-image: url(<?php echo esc_url($hero_image['url']); ?>); background-size: cover;">
+    style="background-image: url(<?php echo esc_url($hero_image['url']); ?>); background-size: cover;  background-position: center center;">
     <div class="container h-100">
         <div class="d-flex flex-column h-100 justify-content-center">
             <div class="text-center text-md-left" data-aos="fade-right" data-aos-delay="100">
