@@ -10,12 +10,16 @@
 get_header();
 $post_date = get_the_date( 'F j, Y' );
 $categories = get_the_category();
+$hero_image = get_the_post_thumbnail_url(get_the_ID(), 'full');
+
+
+$image = get_field('blog_page_hero_image', 'option');
 ?>
 
 <div id="primary" class="content-area article-single">
     <main id="main" class="site-main">
         <div class="jumbotron jumbotron-fluid home-hero mb-0 position-relative"
-            style="background-image: url(<?php the_post_thumbnail_url('full'); ?>); background-size: cover;  height: 50vh; background-position: center center;">
+            style="background-image: url(<?php echo esc_url($image); ?>); background-size: cover;  height: 50vh; background-position: center center;">
             <div class="container h-100 pt-5">
                 <div class="d-flex flex-column h-100 justify-content-center">
                     <div class="text-center text-md-left" data-aos="fade-right" data-aos-delay="300">

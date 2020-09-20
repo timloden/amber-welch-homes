@@ -11,8 +11,8 @@
 <div class="col mb-3">
     <div class="card shadow h-100 post-<?php the_ID(); ?>" <?php post_class(); ?>>
         <a href="<?php the_permalink(); ?>">
-            <?php the_post_thumbnail('medium', ['class' => 'card-img-top', 'title' => 'Feature image']);
- ?>
+            <img class="card-img-top" src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'full'); ?>"
+                alt="Card image cap">
         </a>
         <div class="card-body">
             <h5 class="card-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> </h5>
