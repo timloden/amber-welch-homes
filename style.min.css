@@ -6,7 +6,7 @@ Theme URI: https://timloden.com/
 Author: Tim Loden
 Author URI: https://timloden.com/
 Description: 
-Version: 0.0.0
+Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 
@@ -2957,6 +2957,7 @@ header button.btn,header .gform_wrapper button.button,.gform_wrapper header butt
 .featured-listing .sidx-container .sidx-search-result-grid-item.sidx-search-result-grid-list-item .sidx-mls-details{padding-bottom:.5em}
 .sidx-container .sidx-primary-action .sidx-primary-action-icon-container i.blue{color:#000}
 .hero-text-title.listing-title{font-size:3em}
+.sidx-widget-wrapper{background:#fff;padding:15px}
 @media(prefers-reduced-motion:reduce){.form-control,.gform_wrapper input[type='email'],.gform_wrapper input[type='date'],.gform_wrapper input[type='datetime'],.gform_wrapper input[type='datetime-local'],.gform_wrapper input[type='month'],.gform_wrapper input[type='number'],.gform_wrapper input[type='password'],.gform_wrapper input[type='search'],.gform_wrapper input[type='tel'],.gform_wrapper input[type='text'],.gform_wrapper input[type='time'],.gform_wrapper input[type='week'],.gform_wrapper input[type='url'],.gform_wrapper select,.gform_wrapper textarea{-webkit-transition:none;transition:none}
 .btn,.gform_wrapper .button{-webkit-transition:none;transition:none}
 .fade{-webkit-transition:none;transition:none}

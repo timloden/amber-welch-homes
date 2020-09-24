@@ -18,14 +18,16 @@ $uri  = explode( '?', $uri );
 $uri  = array_shift( $uri );
 $uri  = trim( $uri, '/' );
 
-
 $hero_image = get_field('hero_image');
 
-if ( !$hero_image ) {
+if ( $uri == 'properties' ) {
+    $properties_hero = get_field('properties_hero_image', 'option');
+    $image = $properties_hero['url'];
+} elseif ( !$hero_image ) {
 	$default_hero = get_field('default_page_hero_image', 'option');
 	$image = $default_hero['url'];
 } else {
-	$image = $hero_image['url'];
+    $image = $hero_image['url'];
 }
 ?>
 <div class="jumbotron jumbotron-fluid home-hero mb-0 position-relative"
@@ -35,7 +37,7 @@ if ( !$hero_image ) {
             <div class="text-center text-md-left" data-aos="fade-right" data-aos-delay="300">
                 <?php 
 				// is listing page
-				if (strpos($uri, 'properties') !== false) : ?>
+				if (strpos($uri, 'listing') !== false) : ?>
                 <p class="text-white section-title text-serif mb-1" style="font-size: 2em;">Your Future Home</p>
                 <h1 class="text-white mb-5 hero-text-title listing-title"><?php the_title(); ?></h1>
                 <?php else : ?>
