@@ -22,6 +22,7 @@ $dre = get_field('dre');
 $instagram_link = get_field('instagram_link');
 $facebook_link = get_field('facebook_link');
 $linkedin_link = get_field('linkedin_link');
+$youtube_link = get_field('youtube_link');
 $headshot_img_url = get_the_post_thumbnail_url(get_the_ID(),'full'); 
 ?>
 
@@ -55,12 +56,15 @@ $headshot_img_url = get_the_post_thumbnail_url(get_the_ID(),'full');
                 </div>
                 <div class="d-flex mb-3">
                     <div class="col px-0 social-links">
-                        <?php if ($instagram_link): ?><a href="<?php echo esc_url($instagram_link); ?>"><i
-                                class="lab la-instagram" style="font-size: 2.5em;"></i></a><?php endif; ?>
-                        <?php if ($facebook_link): ?><a href="<?php echo esc_url($facebook_link); ?>"><i
+                        <?php if ($instagram_link): ?><a href="<?php echo esc_url($instagram_link); ?>"
+                            target="_blank"><i class="lab la-instagram"
+                                style="font-size: 2.5em;"></i></a><?php endif; ?>
+                        <?php if ($facebook_link): ?><a href="<?php echo esc_url($facebook_link); ?>" target="_blank"><i
                                 class="lab la-facebook-square" style="font-size: 2.5em;"></i></a><?php endif; ?>
-                        <?php if ($linkedin_link): ?><a href="<?php echo esc_url($linkedin_link); ?>"><i
+                        <?php if ($linkedin_link): ?><a href="<?php echo esc_url($linkedin_link); ?>" target="_blank"><i
                                 class="lab la-linkedin" style="font-size: 2.5em;"></i></a><?php endif; ?>
+                        <?php if ($youtube_link): ?><a href="<?php echo esc_url($youtube_link); ?>" target="_blank"><i
+                                class="lab la-youtube" style="font-size: 2.5em;"></i></a><?php endif; ?>
                     </div>
                 </div>
                 <?php if ($phone_number): ?><p class="mb-2 font-weight-bold" style="font-size: 1.25em;">

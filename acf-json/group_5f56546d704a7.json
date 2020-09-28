@@ -116,6 +116,25 @@
             "maxlength": ""
         },
         {
+            "key": "field_5f724150ec251",
+            "label": "YouTube Link",
+            "name": "youtube_link",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_5f5656ec2ef1e",
             "label": "Awards and Designations",
             "name": "awards_and_designations",
@@ -200,5 +219,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1599493927
+    "modified": 1601323365
 }
